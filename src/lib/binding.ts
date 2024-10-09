@@ -23,6 +23,7 @@ let PgQuery: {
     location: number
     length: number
   }[]
+  deparse: (ast: Node) => string
 }
 
 export type ParseResult = {
@@ -71,4 +72,8 @@ export function fingerprintSync(query: string): string {
 
 export function splitWithScannerSync(query: string) {
   return (PgQuery ??= loadAddon()).splitWithScannerSync(query)
+}
+
+export function deparse(ast: Node): string {
+  return (PgQuery ??= loadAddon()).deparse(ast)
 }

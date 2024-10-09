@@ -35,8 +35,7 @@ This package exports the following functions:
 - `walk` (for traversing the AST)
 - `select` (for type-safe, deep field access through dot-notation)
 - `$` (for type-safe node proxy and type guards)
-
-**Note:** There is no `deparse` function (for turning an AST back into a string) included, as this isn't needed for my use case.
+- `deparse` (for converting an AST back into a SQL string)
 
 ### Walking the AST
 
